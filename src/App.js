@@ -1,5 +1,5 @@
 import React from 'react'
-import { AppBar, Box, Typography } from '@mui/material'
+import {  Box } from '@mui/material'
 import Home from './Home'
 function App() {
   return (
