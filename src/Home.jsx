@@ -12,9 +12,10 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import Msg from './Msg';
 
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const pages = ['Messages automatiques', 'Status automatiques'];
+const settings = ['Profile', 'Compte', 'Tableau de Bord', 'deconnection'];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -164,7 +165,10 @@ function ResponsiveAppBar() {
 
 export default function Home() {
   return (
+    <Box>
     <ResponsiveAppBar/>
+    <Msg/>
+    </Box>
   )
 }
 
