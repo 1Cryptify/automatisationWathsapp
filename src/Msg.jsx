@@ -1,4 +1,4 @@
-import { Delete, Edit, Mic, ModeEdit, Search, SearchRounded, Send, SendAndArchive } from '@mui/icons-material'
+import { Delete, Edit, Mic, ModeEdit, PhotoCamera, Search, SearchRounded, Send, SendAndArchive } from '@mui/icons-material'
 import { Box, Button, ButtonGroup, Divider, Grid, IconButton, InputBase, Paper, TextField, TextareaAutosize, ToggleButton, ToggleButtonGroup, Typography } from '@mui/material'
 import React, { useState } from 'react'
 
@@ -119,11 +119,13 @@ export default function Msg() {
             <Box sx={{width:'100%',spadding:5,alignItems:'flex-end',justifyContent:'center',display:'flex'}}>
             <Paper elevation={2} sx={{width:'100%',marginTop:5,marginBottom:5,display:'grid',placeItems:'center',padding:'5px',backdropFilter:`blur(15px)`,background:`rgba(255, 255, 255, 0.2)`}}><TextField  sx={{width:'90%'}} multiline={true} maxRows={4} placeholder='message...' variant='outlined' helperText="Faire une publication"  InputProps={{
           endAdornment: (
-            <>
+            <> 
+          <IconButton type="submit" aria-label="search">
+              <PhotoCamera/>
+            </IconButton> 
             <IconButton type="submit" aria-label="search">
-            <Mic/>
-            <IconButton/>
-          </IconButton>           
+              <Mic/>
+            </IconButton>        
             <IconButton type="submit" aria-label="search">
               <Send/>
             </IconButton></>
