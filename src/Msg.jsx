@@ -1,4 +1,4 @@
-import { Delete, ModeEdit, Search, SearchRounded, Send, SendAndArchive } from '@mui/icons-material'
+import { Delete, Edit, ModeEdit, Search, SearchRounded, Send, SendAndArchive } from '@mui/icons-material'
 import { Box, Button, ButtonGroup, Grid, IconButton, InputBase, Paper, TextField, TextareaAutosize, ToggleButton, ToggleButtonGroup, Typography } from '@mui/material'
 import React, { useState } from 'react'
 
@@ -68,7 +68,7 @@ export default function Msg() {
         <TextField sx={{marginBottom:5,marginTop:5,width:'80%'}} label="Entrer un contact" value={phoneNumber} error={error} helperText={"entrer un numero valide au format +xxxxxxxx..."} onChange={handleChange} variant="outlined" />
         <Button sx={{width:'80%',top:0,padding:2}} variant='contained' onClick={handleNum}>Ajouter a la liste de contacts</Button>
         <Box sx={{borderWidth:1,borderColor:'#2196f3',height:'500px',borderStyle:'solid',
-    borderBottomRightRadius:'100px',width:'80%',display:'flex', flexDirection:'column',paddingTop:2,backdropFilter:`blur(12px)`,background:`rgba(255, 255, 255, 0.2)`}}>
+    borderBottomRightRadius:'100px',width:'80%',display:'flex', flexDirection:'column',paddingTop:2,backdropFilter:`blur(15px)`,background:`rgba(255, 255, 255, 0.2)`}}>
       <TextField sx={{width:"80%",alignSelf:'center'}}
         label="Recherche"
         variant="standard"
@@ -81,6 +81,7 @@ export default function Msg() {
         }}
       />    
         <Box sx={{padding:5,height:'300px',overflow:'scroll'}}>{listDiffusion.map(numero=><Box key={numero.id} sx={{border:'solid',borderWidth:'1px',margin:3,padding:'20px',borderRadius:'10px',borderColor:'#2196f3',display:'flex',flexDirection:'row',justifyContent:'space-between' ,alignItems:'center'}}>{numero.num}<Box><IconButton><ModeEdit sx={{color:'#2196f3'}}/></IconButton><IconButton><Delete sx={{color:'#ff6666'}}/></IconButton></Box> </Box>)}</Box>
+        <Button color={"primary"} variant='contained' sx={{width:'50%'}}>Modifier <Edit/></Button>
         </Box>
         </Grid>
         <Grid item xs={6}>
@@ -88,25 +89,27 @@ export default function Msg() {
                 <Paper elevation={2} sx={{height:'60px',display:'grid',placeItems:'center'}}>
                     <ToggleButtonGroup exclusive color="primary" {...control}><ToggleButton value={'left'} sx={{width:'150px'}} variant='contained'>Message</ToggleButton><ToggleButton value="right" sx={{width:'150px'}}>Statut</ToggleButton></ToggleButtonGroup>
                 </Paper>
-                <Paper sx={{width:'100%',backdropFilter:`blur(12px)`,background:`rgba(255, 255, 255, 0.2)` ,height:'300px',alignSelf:'center'}}>
+                <Paper sx={{width:'100%',backdropFilter:`blur(15px)`,background:`rgba(255, 255, 255, 0.2)` ,height:'300px',alignSelf:'center'}}>
                   <Box sx={{padding:'20px',width:'100%'}}>
-                      <TextField type='date' helperText="date de publication" required/>
-                      <TextField type='time' helperText="heure de publication" required/>
-                      <TextField helperText="publier dans un pays particulier"/>
-                      <TextField helperText="publier dans une ville particuliere"/>
-                      <TextField type='file' helperText="Importer une liste de Contacts"/>
+                    <Typography>Programmer votre publication</Typography>
+                      <TextField sx={{margin:1}}  type='date' helperText="date de publication" required/>
+                      <TextField sx={{margin:1}} type='time' helperText="heure de publication" required/>
+                      <TextField sx={{margin:1}} helperText="publier dans un pays particulier"/>
+                      <TextField sx={{margin:1}}  helperText="publier dans une ville particuliere"/>
+                      <TextField sx={{margin:1}}  type='file' helperText="Importer une liste de Contacts"/>
                       
                     </Box>
                 </Paper>
             </Box>
             <Box sx={{padding:5,alignItems:'flex-end',justifyContent:'center',display:'flex'}}>
-            <Paper elevation={2} sx={{width:'100%',marginTop:5,marginBottom:5,display:'grid',placeItems:'center',padding:'5px',backdropFilter:`blur(12px)`,background:`rgba(255, 255, 255, 0.2)`}}><TextField  sx={{width:'90%'}} multiline={true} maxRows={4} placeholder='message...' variant='outlined' helperText="Faire une publication"  InputProps={{
+            <Paper elevation={2} sx={{width:'100%',marginTop:5,marginBottom:5,display:'grid',placeItems:'center',padding:'5px',backdropFilter:`blur(15px)`,background:`rgba(255, 255, 255, 0.2)`}}><TextField  sx={{width:'90%'}} multiline={true} maxRows={4} placeholder='message...' variant='outlined' helperText="Faire une publication"  InputProps={{
           endAdornment: (
             <IconButton type="submit" aria-label="search">
               <Send/>
             </IconButton>
           ),
-        }}/></Paper>
+        }}/>
+        </Paper>
             </Box>
         </Grid>
         </Grid>
