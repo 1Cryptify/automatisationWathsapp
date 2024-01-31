@@ -12,6 +12,11 @@ body {
 
 }
 
+@media screen and (max-width:'800px') {
+  body{
+    background: none;
+  }
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
