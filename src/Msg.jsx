@@ -1,5 +1,5 @@
 import { Delete, Edit, ModeEdit, Search, SearchRounded, Send, SendAndArchive } from '@mui/icons-material'
-import { Box, Button, ButtonGroup, Grid, IconButton, InputBase, Paper, TextField, TextareaAutosize, ToggleButton, ToggleButtonGroup, Typography } from '@mui/material'
+import { Box, Button, ButtonGroup, Divider, Grid, IconButton, InputBase, Paper, TextField, TextareaAutosize, ToggleButton, ToggleButtonGroup, Typography } from '@mui/material'
 import React, { useState } from 'react'
 
 
@@ -80,7 +80,7 @@ export default function Msg() {
           ),
         }}
       />    
-        <Box sx={{padding:5,height:'300px',overflow:'scroll'}}>{listDiffusion.map(numero=><Box key={numero.id} sx={{border:'solid',borderWidth:'1px',margin:3,padding:'20px',borderRadius:'10px',borderColor:'#2196f3',display:'flex',flexDirection:'row',justifyContent:'space-between' ,alignItems:'center'}}>{numero.num}<Box><IconButton><ModeEdit sx={{color:'#2196f3'}}/></IconButton><IconButton><Delete sx={{color:'#ff6666'}}/></IconButton></Box> </Box>)}</Box>
+        <Box sx={{padding:5,height:'300px',overflow:'scroll'}}>{listDiffusion.map(numero=><Box key={numero.id} sx={{border:'solid',borderWidth:'1px',margin:3,padding:'10px',borderRadius:'10px',borderColor:'#2196f3',display:'flex',flexDirection:'row',justifyContent:'space-between' ,alignItems:'center'}}>{numero.num}<Box><IconButton><ModeEdit sx={{color:'#2196f3'}}/></IconButton><IconButton><Delete sx={{color:'#ff6666'}}/></IconButton></Box> </Box>)}</Box>
         <Button color={"primary"} variant='contained' sx={{width:'50%'}}>Modifier <Edit/></Button>
         </Box>
         </Grid>
@@ -89,9 +89,10 @@ export default function Msg() {
                 <Paper elevation={2} sx={{height:'60px',display:'grid',placeItems:'center'}}>
                     <ToggleButtonGroup exclusive color="primary" {...control}><ToggleButton value={'left'} sx={{width:'150px'}} variant='contained'>Message</ToggleButton><ToggleButton value="right" sx={{width:'150px'}}>Statut</ToggleButton></ToggleButtonGroup>
                 </Paper>
-                <Paper sx={{width:'100%',backdropFilter:`blur(15px)`,background:`rgba(255, 255, 255, 0.2)` ,height:'300px',alignSelf:'center'}}>
-                  <Box sx={{padding:'20px',width:'100%'}}>
-                    <Typography textAlign={"center"}>Programmer votre publication</Typography>
+                <Paper sx={{width:'100%',backdropFilter:`blur(15px)`,background:`rgba(255, 255, 255, 0.2)` ,height:'350px',alignSelf:'center'}}>
+                  <Box sx={{width:'100%'}}>
+                    <Typography sx={{padding:2,color:'#2196f3'}} textAlign={"center"}>Programmez votre publication</Typography>
+                    <Divider/>
                       <TextField sx={{margin:1}}  type='date' helperText="date de publication" required/>
                       <TextField sx={{margin:1}} type='time' helperText="heure de publication" required/>
                       <TextField sx={{margin:1}} helperText="publier dans un pays particulier"/>
