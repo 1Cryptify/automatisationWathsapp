@@ -91,7 +91,7 @@ export default function Msg() {
                 </Paper>
                 <Paper sx={{width:'100%',backdropFilter:`blur(15px)`,background:`rgba(255, 255, 255, 0.2)` ,height:'300px',alignSelf:'center'}}>
                   <Box sx={{padding:'20px',width:'100%'}}>
-                    <Typography>Programmer votre publication</Typography>
+                    <Typography textAlign={"center"}>Programmer votre publication</Typography>
                       <TextField sx={{margin:1}}  type='date' helperText="date de publication" required/>
                       <TextField sx={{margin:1}} type='time' helperText="heure de publication" required/>
                       <TextField sx={{margin:1}} helperText="publier dans un pays particulier"/>
