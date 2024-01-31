@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import Msg from './Msg';
 
-const pages = ['Messages automatiques', 'Status automatiques'];
+const pages = ['Messages automatiques', 'Status automatiques','Historique'];
 const settings = ['Profile', 'Compte', 'Tableau de Bord', 'deconnection'];
 
 function ResponsiveAppBar() {
