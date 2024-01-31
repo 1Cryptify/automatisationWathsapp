@@ -75,17 +75,20 @@ export default function Msg() {
         <Grid item xs={6}>
             <Box sx={{height:'50px',paddingTop:5}}>
                 <Paper elevation={2} sx={{height:'60px',display:'grid',placeItems:'center'}}>
-                    <ButtonGroup><Button sx={{width:'200px'}} variant='contained'>Message</Button><Button sx={{width:'200px'}}>Statut</Button></ButtonGroup>
+                    <ButtonGroup><Button sx={{width:'150px'}} variant='contained'>Message</Button><Button sx={{width:'200px'}}>Statut</Button></ButtonGroup>
+                </Paper>
+                <Paper sx={{width:'100%',backdropFilter:`blur:5px`,background:`rgba(255, 255, 255, 0.5)`}}>
+                  <Box><Button>Hello</Button></Box>
                 </Paper>
             </Box>
             <Box sx={{padding:5,height:'620px',alignItems:'flex-end',justifyContent:'center',display:'flex'}}>
-            <TextField placeholder='message...' variant='outlined' sx={{width:'100%',marginTop:5,marginBottom:5}} InputProps={{
+            <Paper elevation={2} sx={{width:'100%',marginTop:5,marginBottom:5,display:'grid',placeItems:'center',padding:'5px'}}><TextField  sx={{width:'90%'}} multiline={true} maxRows={4} placeholder='message...' variant='outlined'  InputProps={{
           endAdornment: (
             <IconButton type="submit" aria-label="search">
               <Send/>
             </IconButton>
           ),
-        }}/>
+        }}/></Paper>
             </Box>
         </Grid>
         </Grid>
