@@ -3,7 +3,21 @@ import { Box, Button, ButtonGroup, Divider, Grid, IconButton, InputBase, Paper, 
 import React, { useState } from 'react'
 
 
-
+// const Search = styled('div')(({ theme }) => ({
+//   position: 'relative',
+//   borderRadius: theme.shape.borderRadius,
+//   backgroundColor: alpha(theme.palette.common.white, 0.15),
+//   '&:hover': {
+//     backgroundColor: alpha(theme.palette.common.white, 0.25),
+//   },
+//   marginRight: theme.spacing(2),
+//   marginLeft: 0,
+//   width: '100%',
+//   [theme.breakpoints.up('sm')]: {
+//     marginLeft: theme.spacing(3),
+//     width: 'auto',
+//   },
+// }));
 
 
 
@@ -64,7 +78,7 @@ export default function Msg() {
   return (
     <Box sx={{height:'100%'}}>
         <Grid container>
-        <Grid item xs={12} md={6} display={'flex'} flexDirection={'column'} placeItems={'center'}>
+        <Grid item xs={12} md={6} display={'flex'} flexDirection={'column'} sx={{placeItems:'center'}}>
         <TextField sx={{marginBottom:5,marginTop:5,width:'80%'}} label="Entrer un contact" value={phoneNumber} error={error} helperText={"entrer un numero valide au format +xxxxxxxx..."} onChange={handleChange} variant="outlined" />
         <Button sx={{width:'80%',top:0,padding:2}} variant='contained' onClick={handleNum}>Ajouter a la liste de contacts</Button>
         <Box sx={{borderWidth:1,borderColor:'#2196f3',height:'500px',borderStyle:'solid',
@@ -84,12 +98,12 @@ export default function Msg() {
         <Button color={"primary"} variant='contained' sx={{width:'50%'}}>Modifier <Edit/></Button>
         </Box>
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={6} >
             <Box sx={{paddingTop:5}}>
                 <Paper elevation={2} sx={{height:'60px',display:'grid',placeItems:'center'}}>
                     <ToggleButtonGroup exclusive color="primary" {...control}><ToggleButton value={'left'} sx={{width:'150px'}} variant='contained'>Message</ToggleButton><ToggleButton value="right" sx={{width:'150px'}}>Statut</ToggleButton></ToggleButtonGroup>
                 </Paper>
-                <Paper sx={{width:'100%',backdropFilter:`blur(15px)`,background:`rgba(255, 255, 255, 0.2)` ,height:'350px',alignSelf:'center'}}>
+                <Paper sx={{width:'100%',backdropFilter:`blur(15px)`,background:`rgba(255, 255, 255, 0.2)` ,minHeight:'350px',alignSelf:'center'}}>
                   <Box sx={{width:'100%'}}>
                     <Typography sx={{padding:2,color:'#2196f3'}} textAlign={"center"}>Programmez votre publication</Typography>
                     <Divider/>
@@ -102,7 +116,7 @@ export default function Msg() {
                     </Box>
                 </Paper>
             </Box>
-            <Box sx={{padding:5,alignItems:'flex-end',justifyContent:'center',display:'flex'}}>
+            <Box sx={{width:'100%',spadding:5,alignItems:'flex-end',justifyContent:'center',display:'flex'}}>
             <Paper elevation={2} sx={{width:'100%',marginTop:5,marginBottom:5,display:'grid',placeItems:'center',padding:'5px',backdropFilter:`blur(15px)`,background:`rgba(255, 255, 255, 0.2)`}}><TextField  sx={{width:'90%'}} multiline={true} maxRows={4} placeholder='message...' variant='outlined' helperText="Faire une publication"  InputProps={{
           endAdornment: (
             <IconButton type="submit" aria-label="search">

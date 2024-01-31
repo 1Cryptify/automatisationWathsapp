@@ -6,16 +6,8 @@ function App() {
     <Box sx={{
       minHeight: '100vh', // Assurez-vous que le conteneur occupe au moins toute la hauteur de la vue
       color: 'black', // Ajoutez une couleur de texte appropriée pour améliorer la lisibilité
-    
-      
-      
-      
-      display:'flex',flexDirection:'row',flex:1,overflow:'hidden',justifyContent:'center'
-    
-    
-    
     }}>
-      <Box sx={{width:'60%',height:'100%', padding:'60px'}}>
+      <Box sx={{height:'100%',xs:{background:'red'},md:{background:'blue'}}}>
         <Home/>
       </Box>
     </Box>
