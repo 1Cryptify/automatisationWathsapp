@@ -64,7 +64,7 @@ export default function Msg() {
   return (
     <Box sx={{height:'100%'}}>
         <Grid container>
-        <Grid item xs={6} display={'flex'} flexDirection={'column'} placeItems={'center'}>
+        <Grid item xs={12} md={6} display={'flex'} flexDirection={'column'} placeItems={'center'}>
         <TextField sx={{marginBottom:5,marginTop:5,width:'80%'}} label="Entrer un contact" value={phoneNumber} error={error} helperText={"entrer un numero valide au format +xxxxxxxx..."} onChange={handleChange} variant="outlined" />
         <Button sx={{width:'80%',top:0,padding:2}} variant='contained' onClick={handleNum}>Ajouter a la liste de contacts</Button>
         <Box sx={{borderWidth:1,borderColor:'#2196f3',height:'500px',borderStyle:'solid',
@@ -84,7 +84,7 @@ export default function Msg() {
         <Button color={"primary"} variant='contained' sx={{width:'50%'}}>Modifier <Edit/></Button>
         </Box>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12} md={6}>
             <Box sx={{paddingTop:5}}>
                 <Paper elevation={2} sx={{height:'60px',display:'grid',placeItems:'center'}}>
                     <ToggleButtonGroup exclusive color="primary" {...control}><ToggleButton value={'left'} sx={{width:'150px'}} variant='contained'>Message</ToggleButton><ToggleButton value="right" sx={{width:'150px'}}>Statut</ToggleButton></ToggleButtonGroup>
