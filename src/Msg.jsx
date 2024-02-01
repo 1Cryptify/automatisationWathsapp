@@ -101,7 +101,7 @@ export default function Msg() {
         <Grid item xs={12} md={6} >
             <Box sx={{padding:5}}>
                 <Paper elevation={2} sx={{height:'60px',display:'grid',placeItems:'center'}}>
-                    <ToggleButtonGroup exclusive color="primary" {...control}><ToggleButton value={'left'} sx={{width:'150px'}} variant='contained'>Message</ToggleButton><ToggleButton value="right" sx={{width:'150px'}}>Statut</ToggleButton></ToggleButtonGroup>
+                    <ToggleButtonGroup exclusive color="primary" {...control}><ToggleButton value={'left'} sx={{width:'100px'}} variant='contained'>Message</ToggleButton><ToggleButton value="right" sx={{width:'100px'}}>Statut</ToggleButton></ToggleButtonGroup>
                 </Paper>
                 <Paper sx={{width:'100%',backdropFilter:`blur(12px)`,background:`rgba(255, 255, 255, 0.2)` ,minHeight:'350px',alignSelf:'center'}}>
                   <Box sx={{width:'100%'}}>
