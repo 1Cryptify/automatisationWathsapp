@@ -117,7 +117,7 @@ export default function Msg() {
                 </Paper>
             </Box>
             <Box sx={{width:'100%',alignItems:'flex-end',justifyContent:'center',display:'flex'}}>
-            <Paper elevation={2} sx={{width:'100%',marginTop:5,marginBottom:5,display:'grid',placeItems:'center',padding:'5px',backdropFilter:`blur(12px)`,background:`rgba(255, 255, 255, 0.2)`}}><TextField  sx={{width:'90%'}} multiline={true} maxRows={4} placeholder='message...' variant='outlined' helperText="Faire une publication"  InputProps={{
+            <Paper elevation={2} sx={{width:'100%',marginTop:5,marginBottom:5,display:'grid',placeItems:'center',padding:'5px',background:"#fff"}}><TextField  sx={{width:'90%'}} multiline={true} maxRows={4} placeholder='message...' variant='outlined' helperText="Faire une publication"  InputProps={{
           endAdornment: (
             <> 
           <IconButton type="submit" aria-label="search">
