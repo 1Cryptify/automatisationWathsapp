@@ -6,9 +6,12 @@ import { styled } from '@mui/material/styles';
 const MyApp = styled('div')(({ theme }) => ({
   height:'100%',
     [theme.breakpoints.down('md')]: {
-      fontSize:'0.7em',
+      fontSize:'0.4em',
     }
     ,
+    [theme.breakpoints.up('sm')]: {
+      fontSize:'0.9em',
+    },
     [theme.breakpoints.up('md')]: {
       paddingLeft:'10px',
       paddingRight:'10px',
